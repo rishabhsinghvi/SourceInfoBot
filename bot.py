@@ -35,7 +35,7 @@ def get_info():
 # Gets the JSON object, by comparing the strings in the url array
 # Returns None if no such object present
 def find_info(_domain):
-    found_flag = False
+   # found_flag = False
     for object in data:
         for domain in object['url']:
             if domain == _domain:
