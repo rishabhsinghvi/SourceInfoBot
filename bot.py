@@ -12,7 +12,7 @@ import sys
 import time
 from enum import Enum
 
-data = None # data is global var so that we it only fetches the info from json once.
+data = None # data is global var so that it only fetches the info from json once.
 
 class ErrType(Enum):
     error = "Error"
