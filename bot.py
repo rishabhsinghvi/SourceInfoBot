@@ -39,6 +39,7 @@ def find_info(_domain):
     for object in data:
         for domain in object['url']:
             if domain == _domain:
+                log(ErrType.Info, "Submission URL found in data: "+domain)
                 return object
     return None
 
@@ -50,6 +51,7 @@ def proc_submission(submission):
     object = find_info(domain)
     if object == None:
         log_unknown_url(submission.url)
+        log(ErrType.Info, "Unknown submission URL. URL added to unknown.log")
         return None
     return create_comment(object)
 
