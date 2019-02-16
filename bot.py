@@ -118,7 +118,7 @@ def main():
     for submission in reddit.subreddit(subs).stream.submissions():
         comment = proc_submission(submission)
         if comment == None:
-            pass
+            continue
         else:
             submission.reply(comment)
 
